@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { HoverCardMeaning } from "./hover-card-meaning";
+import { CelticCrossMeanings } from "@/utils/celtic-cross";
 
 const TarotCard = ({
   position,
@@ -10,16 +12,18 @@ const TarotCard = ({
   <div className="relative">
     <div className="overflow-hidden w-24 h-34 flex items-center justify-center bg-slate-200 border-2 rounded-lg shadow-md hover:bg-slate-300 transition-colors cursor-pointer">
       <div className="flex items-center justify-center rounded-lg overflow-hidden">
-        <Image
-          src="/back.jpg"
-          width={90}
-          height={100}
-          alt="Back of Thoth Card"
-        />
+        <HoverCardMeaning card={CelticCrossMeanings[position]}>
+          <Image
+            src="/back.jpg"
+            width={90}
+            height={100}
+            alt="Back of Thoth Card"
+          />
+        </HoverCardMeaning>
       </div>
     </div>
     <div className="mt-[2px] text-xs text-center text-slate-50 max-w-24">
-      {label}
+      {/* {label} */}
     </div>
   </div>
 );

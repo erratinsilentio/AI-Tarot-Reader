@@ -23,7 +23,10 @@ export function CardsMeaning() {
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <Button variant="outline" className="text-[13px] font-extralight">
+        <Button
+          variant="outline"
+          className="text-[13px] font-extralight hover:font-bold duration-200 transition-all"
+        >
           SEE CARDS MEANING
         </Button>
       </DrawerTrigger>

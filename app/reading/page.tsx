@@ -10,19 +10,19 @@ export default function Reading() {
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-center">
           <div className="px-12 flex flex-row items-end justify-end">
             <Image
-              src="/celtic.png"
+              src="/TarotReader.png"
               alt="Tarot Reader logo"
-              width={160}
+              width={180}
               height={38}
               priority
-              className="mr-4"
+              className="sm:mr-4"
             />
-            <span className="px-[10px] sm:pt-0 text-[36px] sm:text-[50px] font-[family-name:var(--font-geist-mono)]">
-              Ask <br />a Question...
+            <span className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)]">
+              Tarot AI
             </span>
           </div>
-          <section className="w-full sm:w-[80vw] px-12 pt-6 flex flex-row gap-2">
-            <Input />
+          <section className="w-full sm:w-[80vw] px-4 pt-6 flex flex-row gap-2">
+            <Input placeholder="Ask a Question..." />
             <button className="w-9 h-9 border border-input rounded-md flex justify-center items-center text-sm hover:brightness-150">
               ⎆
             </button>
@@ -30,9 +30,9 @@ export default function Reading() {
               10
             </div>
           </section>
-          <section className="w-full px-12 sm:w-[80vw] flex flex-row justify-center gap-12 sm:flex-row sm:justify-start pt-12">
-            <Celtic />
+          <section className="w-full px-4 sm:w-[80vw] flex flex-col justify-center items-center gap-12 sm:flex-row sm:justify-start sm:items-start sm:pt-12">
             <ReadingArea />
+            <Celtic />
           </section>
         </main>
       </div>
