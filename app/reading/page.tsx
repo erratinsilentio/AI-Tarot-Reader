@@ -31,7 +31,7 @@ export default function Reading() {
               10
             </div>
           </section>
-          <section className="w-full px-12 sm:w-[80vw] flex flex-row justify-center gap-8 sm:flex-row sm:justify-start pt-12">
+          <section className="w-full px-12 sm:w-[80vw] flex flex-row justify-center gap-12 sm:flex-row sm:justify-start pt-12">
             <Celtic />
             <ReadingArea />
           </section>
