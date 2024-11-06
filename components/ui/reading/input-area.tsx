@@ -27,16 +27,24 @@ export const TarotReadingInput = ({
         disabled={areCardsGenerated}
         value={inputValue}
         onChange={handleInputChange}
-        minLength={5}
+        minLength={15}
         maxLength={50}
       />
-      <Button
-        onClick={createNewSet}
-        className="h-9 border border-input rounded-md flex justify-center items-center text-sm hover:brightness-150"
-        disabled={areCardsGenerated}
+      <HoverCardMeaning
+        info={{
+          name: "Generate Reading",
+          description:
+            "Clicking this button will send your question to AI model and new tarot reading will be generated. One reading costs 1 token.",
+        }}
       >
-        generate ⎆
-      </Button>
+        <Button
+          onClick={createNewSet}
+          className="h-9 border border-input rounded-md flex justify-center items-center text-sm hover:brightness-150"
+          disabled={areCardsGenerated || inputValue.length < 15}
+        >
+          generate ⎆
+        </Button>
+      </HoverCardMeaning>
       <HoverCardMeaning
         info={{
           name: "Reset",
