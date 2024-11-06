@@ -1,7 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { Celtic } from "@/components/ui/reading/celtic-cross";
 import { ReadingArea } from "@/components/ui/reading/textarea-label";
-import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 
 export default function Reading() {
@@ -40,16 +39,3 @@ export default function Reading() {
     </>
   );
 }
-
-const tarotCards = [
-  { description: "The Fool" },
-  { description: "The Magician" },
-  { description: "The High Priestess" },
-  { description: "The Empress" },
-  { description: "The Emperor" },
-  { description: "The Hierophant" },
-  { description: "The Lovers" },
-  { description: "The Chariot" },
-  { description: "Strength" },
-  { description: "The Hermit" },
-];

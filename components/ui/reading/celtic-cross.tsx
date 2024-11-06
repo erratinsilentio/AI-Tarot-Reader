@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-const TarotCard = ({ position, label }) => (
+const TarotCard = ({
+  position,
+  label,
+}: {
+  position: number;
+  label: string;
+}) => (
   <div className="relative">
     <div className="overflow-hidden w-24 h-34 flex items-center justify-center bg-slate-200 border-2 rounded-lg shadow-md hover:bg-slate-300 transition-colors cursor-pointer">
       <div className="flex items-center justify-center rounded-lg overflow-hidden">

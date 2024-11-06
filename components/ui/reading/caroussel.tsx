@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -54,7 +54,7 @@ export function CarouselDemo() {
       </Carousel>
       <div>
         <h1 className="font-bold text-[20px]">{ThotDeck[currentIndex].name}</h1>
-        <p className="text-[16px]">
+        <p className="text-[16px] font-thin">
           {ThotDeck[currentIndex].description ||
             "Here goes Tarot card description"}
         </p>
