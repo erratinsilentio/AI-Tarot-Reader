@@ -14,7 +14,7 @@ const TarotCard = ({ position, label }) => (
 export const Celtic = () => {
   return (
     <main className="flex flex-row">
-      <section className="flex flex-col pr-12 gap-2">
+      <section className="flex flex-col pr-6 sm:pr-12 gap-2">
         <TarotCard position={1} label={"ee"} />
         <TarotCard position={1} label={"ee"} />
         <TarotCard position={1} label={"ee"} />
