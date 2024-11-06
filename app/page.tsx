@@ -16,7 +16,7 @@ export default function Home() {
               className="sm:mr-4"
             />
             <span className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)]">
-              Tarot AI
+              Tarot Reader
             </span>
           </div>
           <ol className="list-inside list-decimal text-sm text-center sm:text-center font-[family-name:var(--font-geist-mono)]">

@@ -40,7 +40,7 @@ export default function Reading() {
               className="sm:mr-4"
             />
             <span className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)]">
-              Tarot AI
+              Tarot Reader
             </span>
           </div>
           <section className="w-full sm:w-[80vw] px-4 pt-6 flex flex-row items-center justify-evenly gap-2">

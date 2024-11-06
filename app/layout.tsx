@@ -4,6 +4,13 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Footer } from "@/components/ui/layout/footer";
 import { Header } from "@/components/ui/layout/header";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,16 +38,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <ClerkProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
