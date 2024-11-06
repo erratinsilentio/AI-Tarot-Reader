@@ -8,7 +8,7 @@ export const HoverCardMeaning = ({ children, info }) => {
   return (
     <HoverCard>
       <HoverCardTrigger>{children}</HoverCardTrigger>
-      <HoverCardContent>
+      <HoverCardContent className="z-20">
         <h1 className="font-bold pb-2">{info.name}</h1>
         <p className="text-[12px]">{info.description}</p>
       </HoverCardContent>
