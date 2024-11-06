@@ -47,6 +47,7 @@ export default function Reading() {
             <TarotReadingInput
               createNewSet={createNewSet}
               resetCards={resetCards}
+              areCardsGenerated={areCardsGenerated}
             />
           </section>
           <section className="w-full pt-4 px-4 sm:w-[80vw] flex flex-col justify-center items-center gap-12 sm:flex-row sm:justify-start sm:items-start sm:pt-2">
