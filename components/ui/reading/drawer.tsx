@@ -25,9 +25,9 @@ export function CardsMeaning() {
       <DrawerTrigger asChild>
         <Button
           variant="outline"
-          className="text-[13px] font-extralight hover:font-bold duration-200 transition-all"
+          className="text-[13px] font-extralight hover:font-bold duration-200 transition-all hidden sm:inline"
         >
-          SEE CARDS MEANING
+          cards info
         </Button>
       </DrawerTrigger>
       <DrawerContent>

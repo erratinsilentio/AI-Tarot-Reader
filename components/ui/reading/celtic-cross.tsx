@@ -1,53 +1,25 @@
-import Image from "next/image";
-import { HoverCardMeaning } from "./hover-card-meaning";
-import { CelticCrossMeanings } from "@/utils/celtic-cross";
+import { RotatedTarotCard, TarotCard } from "./tarot-cards";
 
-const TarotCard = ({
-  position,
-  label,
-}: {
-  position: number;
-  label: string;
-}) => (
-  <div className="relative">
-    <div className="overflow-hidden w-24 h-34 flex items-center justify-center bg-slate-200 border-2 rounded-lg shadow-md hover:bg-slate-300 transition-colors cursor-pointer">
-      <div className="flex items-center justify-center rounded-lg overflow-hidden">
-        <HoverCardMeaning card={CelticCrossMeanings[position]}>
-          <Image
-            src="/back.jpg"
-            width={90}
-            height={100}
-            alt="Back of Thoth Card"
-          />
-        </HoverCardMeaning>
-      </div>
-    </div>
-    <div className="mt-[2px] text-xs text-center text-slate-50 max-w-24">
-      {/* {label} */}
-    </div>
-  </div>
-);
-
-export const Celtic = () => {
+export const Celtic = ({ cards }: { cards: number[] }) => {
   return (
-    <main className="flex flex-row">
-      <section className="flex flex-col justify-center">
-        <TarotCard position={5} label={"5"} />
+    <main className="relative flex flex-row sm:h-[90vh] pt-4">
+      <section className="flex flex-col justify-center sm:h-[85vh]">
+        <TarotCard position={5} card={cards ? cards[4] : undefined} />
       </section>
-      <section className="flex flex-col justify-evenly sm:px-12">
-        <TarotCard position={4} label={"4"} />
-        <TarotCard position={1} label={"1"} />
-        <TarotCard position={3} label={"3"} />
+      <section className="flex flex-col justify-evenly sm:px-12 sm:h-[89vh]">
+        <TarotCard position={4} card={cards ? cards[3] : undefined} />
+        <TarotCard position={1} card={cards ? cards[0] : undefined} />
+        <TarotCard position={3} card={cards ? cards[2] : undefined} />
+        <RotatedTarotCard position={2} card={cards ? cards[1] : undefined} />
       </section>
-
-      <section className="flex flex-col justify-center">
-        <TarotCard position={6} label={"6"} />
+      <section className="flex flex-col justify-center sm:h-[85vh]">
+        <TarotCard position={6} card={cards ? cards[5] : undefined} />
       </section>
-      <section className="flex flex-col pl-6 sm:pl-12 gap-2">
-        <TarotCard position={7} label={"7"} />
-        <TarotCard position={8} label={"8"} />
-        <TarotCard position={9} label={"9"} />
-        <TarotCard position={10} label={"10"} />
+      <section className="flex flex-col pl-6 sm:pl-12 gap-10">
+        <TarotCard position={7} card={cards ? cards[6] : undefined} />
+        <TarotCard position={8} card={cards ? cards[7] : undefined} />
+        <TarotCard position={9} card={cards ? cards[8] : undefined} />
+        <TarotCard position={10} card={cards ? cards[9] : undefined} />
       </section>
     </main>
   );

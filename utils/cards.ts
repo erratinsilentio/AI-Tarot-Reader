@@ -5,7 +5,7 @@ interface Card {
 }
 
 export const ThotDeck: Card[] = [
-  { name: "The Fool", description: "", filename: "The Fool.jpg" },
+  { name: "The Fool", description: "", filename: "Fool.jpg" },
   { name: "The Magus", description: "", filename: "The Magus.jpg" },
   { name: "The Priestess", description: "", filename: "The Priestess.jpg" },
   { name: "The Empress", description: "", filename: "The Empress.jpg" },

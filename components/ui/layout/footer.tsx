@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="row-start-3 pb-2 flex gap-6 flex-wrap items-center justify-center">
-      <a
+    <footer className="row-start-3 pb-2 flex gap-6 flex-wrap items-center justify-center w-[100vw]">
+      <Link
         className="group flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        href="/learn"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -18,10 +19,10 @@ export const Footer = () => {
           className="group-hover:animate-ping"
         />
         Learn
-      </a>
-      <a
+      </Link>
+      <Link
         className="group flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        href="/pricing"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -33,11 +34,11 @@ export const Footer = () => {
           height={16}
           className="group-hover:animate-ping"
         />
-        About
-      </a>
-      <a
+        Pricing
+      </Link>
+      <Link
         className="group flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        href="/contact"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -50,7 +51,7 @@ export const Footer = () => {
           className="group-hover:animate-ping"
         />
         Contact
-      </a>
+      </Link>
     </footer>
   );
 };
