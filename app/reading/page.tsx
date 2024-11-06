@@ -1,5 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Celtic } from "@/components/ui/reading/celtic-cross";
+import { ReadingArea } from "@/components/ui/reading/textarea-label";
+import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 
 export default function Reading() {
@@ -29,8 +31,9 @@ export default function Reading() {
               10
             </div>
           </section>
-          <section className="w-full px-12 sm:w-[80vw] flex flex-row justify-center sm:flex-row sm:justify-start pt-12">
+          <section className="w-full px-12 sm:w-[80vw] flex flex-row justify-center gap-8 sm:flex-row sm:justify-start pt-12">
             <Celtic />
+            <ReadingArea />
           </section>
         </main>
       </div>
