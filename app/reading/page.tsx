@@ -5,6 +5,7 @@ import { ReadingArea } from "@/components/ui/reading/textarea-label";
 import generateSetOfCards from "@/utils/generate-cards";
 import Image from "next/image";
 import { useState } from "react";
+import { useAuth } from "@clerk/nextjs";
 
 export default function Reading() {
   const [areCardsGenerated, setAreCardsGenerated] = useState<boolean>(false);
@@ -43,7 +44,7 @@ export default function Reading() {
               priority
               className=""
             />
-            <h1 className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
+            <h1 className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-sans)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
               Tarot Reader
             </h1>
           </div>
