@@ -17,6 +17,7 @@ export default function Reading() {
       Array.isArray(cards) &&
       cards.every((card) => typeof card === "number")
     ) {
+      // @ts-ignore
       setGeneratedCards(cards as number[]);
       setAreCardsGenerated(true);
       setTokens(tokens - 1);
