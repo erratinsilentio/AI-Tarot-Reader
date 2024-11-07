@@ -8,21 +8,14 @@ import { useState } from "react";
 
 export default function Reading() {
   const [areCardsGenerated, setAreCardsGenerated] = useState<boolean>(false);
-  const [generatedCards, setGeneratedCards] = useState([]);
+  const [generatedCards, setGeneratedCards] = useState<number[]>([]);
   const [tokens, setTokens] = useState<number>(10);
 
   function createNewSet() {
     const cards = generateSetOfCards();
-    if (
-      Array.isArray(cards) &&
-      cards.every((card) => typeof card === "number")
-    ) {
-      // @ts-ignore
-      setGeneratedCards(cards as number[]);
-      setAreCardsGenerated(true);
-      setTokens(tokens - 1);
-    }
-    console.log(generatedCards);
+    setGeneratedCards(cards);
+    setAreCardsGenerated(true);
+    setTokens(tokens - 1);
   }
 
   function resetCards() {
@@ -55,7 +48,7 @@ export default function Reading() {
             />
           </section>
           <section className="w-full pt-4 px-4 sm:w-[80vw] flex flex-col justify-center items-center gap-12 sm:flex-row sm:justify-start sm:items-start sm:pt-2">
-            <ReadingArea />
+            <ReadingArea areCardsGenerated={areCardsGenerated} />
             <Celtic cards={generatedCards} />
           </section>
         </main>

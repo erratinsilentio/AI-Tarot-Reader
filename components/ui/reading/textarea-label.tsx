@@ -1,11 +1,6 @@
-import { ragChat } from "@/lib/rag-chat";
-import { Button } from "../button";
-import { Input } from "../input";
-import { Textarea } from "../textarea";
-import { HoverCardMeaning } from "./hover-card-meaning";
 import { ChatWrapper } from "./chat-wrapper";
 
-export const ReadingArea = async () => {
+export const ReadingArea = ({ areCardsGenerated }) => {
   return (
     <div className="flex flex-col gap-2 w-full h-[30vh] sm:h-[100vh]">
       {/* <Textarea
@@ -30,7 +25,7 @@ export const ReadingArea = async () => {
       <Button className="h-12" disabled>
         send
       </Button> */}
-      <ChatWrapper />
+      <ChatWrapper areCardsGenerated={areCardsGenerated} />
     </div>
   );
 };
