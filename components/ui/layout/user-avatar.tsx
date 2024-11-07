@@ -8,9 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { SignOutButton } from "@clerk/nextjs";
-import { User } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../button";
 
 export const UserAvatar = () => {
   return (

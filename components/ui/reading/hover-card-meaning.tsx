@@ -4,7 +4,18 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
-export const HoverCardMeaning = ({ children, info }) => {
+interface HoverCardMeaningProps {
+  children: React.ReactNode;
+  info: {
+    name: string;
+    description: string;
+  };
+}
+
+export const HoverCardMeaning: React.FC<HoverCardMeaningProps> = ({
+  children,
+  info,
+}) => {
   return (
     <HoverCard>
       <HoverCardTrigger>{children}</HoverCardTrigger>

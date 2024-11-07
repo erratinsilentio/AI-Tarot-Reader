@@ -1,5 +1,4 @@
 import { AlertComponent } from "@/components/ui/home/alert";
-import { Footer } from "@/components/ui/layout/footer";
 import Image from "next/image";
 import Link from "next/link";
 

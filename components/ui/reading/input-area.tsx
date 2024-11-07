@@ -4,14 +4,20 @@ import { Input } from "../input";
 import { HoverCardMeaning } from "./hover-card-meaning";
 import { useState } from "react";
 
-export const TarotReadingInput = ({
+interface TarotReadingInputProps {
+  createNewSet: () => void;
+  resetCards: () => void;
+  areCardsGenerated: boolean;
+}
+
+export const TarotReadingInput: React.FC<TarotReadingInputProps> = ({
   createNewSet,
   resetCards,
   areCardsGenerated,
 }) => {
   const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
