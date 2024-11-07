@@ -9,9 +9,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        "red-blur-inset": "inset 0 0 15px 4px rgba(255, 0, 0, 0.1)",
-      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
