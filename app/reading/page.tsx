@@ -13,8 +13,11 @@ export default function Reading() {
 
   function createNewSet() {
     const cards = generateSetOfCards();
-    if (cards) {
-      setGeneratedCards(cards);
+    if (
+      Array.isArray(cards) &&
+      cards.every((card) => typeof card === "number")
+    ) {
+      setGeneratedCards(cards as number[]);
       setAreCardsGenerated(true);
       setTokens(tokens - 1);
     }
