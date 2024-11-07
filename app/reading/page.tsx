@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Reading() {
   const [areCardsGenerated, setAreCardsGenerated] = useState<boolean>(false);
-  const [generatedCards, setGeneratedCards] = useState(undefined);
+  const [generatedCards, setGeneratedCards] = useState([]);
   const [tokens, setTokens] = useState<number>(10);
 
   function createNewSet() {
@@ -22,7 +22,7 @@ export default function Reading() {
   }
 
   function resetCards() {
-    setGeneratedCards(null);
+    setGeneratedCards([]);
     setAreCardsGenerated(false);
   }
 
