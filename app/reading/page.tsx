@@ -32,16 +32,16 @@ export default function Reading() {
         <main className="flex flex-col gap-6 row-start-2 items-center sm:items-center">
           <div className="px-12 flex flex-row items-end justify-end">
             <Image
-              src="/TarotReader.png"
+              src="/Tarot Emoji (1).png"
               alt="Tarot Reader logo"
-              width={180}
+              width={200}
               height={38}
               priority
-              className="sm:mr-4"
+              className=""
             />
-            <span className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)]">
+            <h1 className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
               Tarot Reader
-            </span>
+            </h1>
           </div>
           <section className="w-full sm:w-[80vw] px-4 pt-6 flex flex-row items-center justify-evenly gap-2">
             <TarotReadingInput

@@ -2,6 +2,7 @@ import { UserAvatar } from "./user-avatar";
 import { LoginButton } from "./login-button";
 import { RemainingTokens } from "./remaining-tokens";
 import { auth, currentUser } from "@clerk/nextjs/server";
+import { DropdownMenu } from "../dropdown-menu";
 
 export async function Header() {
   const { userId } = await auth();

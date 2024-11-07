@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const Footer = () => {
+export async function Footer() {
   return (
-    <footer className="row-start-3 pb-2 flex gap-6 flex-wrap items-center justify-center w-[100vw]">
+    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
       <Link
         className="group flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="/learn"
@@ -54,4 +54,4 @@ export const Footer = () => {
       </Link>
     </footer>
   );
-};
+}
