@@ -5,7 +5,6 @@ import { ReadingArea } from "@/components/ui/reading/textarea-label";
 import generateSetOfCards from "@/utils/generate-cards";
 import Image from "next/image";
 import { useState } from "react";
-import { useAuth } from "@clerk/nextjs";
 
 export default function Reading() {
   const [areCardsGenerated, setAreCardsGenerated] = useState<boolean>(false);
