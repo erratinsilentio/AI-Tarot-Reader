@@ -5,6 +5,7 @@ import { Input } from "../input";
 import { HoverCardMeaning } from "./hover-card-meaning";
 import { Button } from "../button";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 export const ChatWrapper = ({
   sessionId,
@@ -15,6 +16,9 @@ export const ChatWrapper = ({
   initialMessages?: Message[];
   areCardsGenerated: boolean;
 }) => {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("query");
+
   const { messages, handleInputChange, handleSubmit, input, setInput } =
     useChat({
       api: "/api/chat-stream",
@@ -22,15 +26,21 @@ export const ChatWrapper = ({
       initialMessages,
     });
 
-  const searchParams = useSearchParams();
-  const query = searchParams.get("query");
+  useEffect(() => {
+    const triggerMessage = searchParams.get("query");
+    if (triggerMessage) {
+      setInput(triggerMessage);
+      console.log(input);
+      handleSubmit();
+    }
+  }, [searchParams]);
 
   return (
-    <div>
-      <div className="flex text-white h-[calc(100vh-64px)] flex-col overflow-y-auto items-center min-h-[70px] max-h-[100vh] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
+    <>
+      <div className="flex text-white h-[calc(100vh-64px)] flex-col overflow-y-auto items-center min-h-[70px] max-h-[100vh] w-full max-w-1/2 rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50">
         {messages.length ? (
           messages.map((message, i) => (
-            <div className="w-[60vw] flex flex-row gap-3 p-6" key={i}>
+            <div className="w-full flex flex-row gap-3 p-6" key={i}>
               <div className="min-w-12">
                 {message.role === "user" ? "User" : "Bot"}
               </div>
@@ -75,6 +85,6 @@ export const ChatWrapper = ({
         </div>
         <Button className="h-12 w-full p-0">send</Button>
       </form>
-    </div>
+    </>
   );
 };

@@ -31,11 +31,6 @@ export const TarotReadingInput: React.FC<TarotReadingInputProps> = ({
     replace(`${pathname}?${params.toString()}`);
   }
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-    handleAsk(event.target.value);
-  };
-
   const handleReset = () => {
     setInputValue("");
     resetCards();
@@ -44,6 +39,7 @@ export const TarotReadingInput: React.FC<TarotReadingInputProps> = ({
   const handleGenerate = (e: React.MouseEvent) => {
     e.preventDefault();
     createNewSet();
+    handleAsk(inputValue);
   };
 
   return (
@@ -52,7 +48,7 @@ export const TarotReadingInput: React.FC<TarotReadingInputProps> = ({
         placeholder="Ask a Question..."
         disabled={areCardsGenerated}
         value={inputValue}
-        onChange={handleInputChange}
+        onChange={(e) => setInputValue(e.target.value)}
         minLength={15}
         maxLength={50}
       />

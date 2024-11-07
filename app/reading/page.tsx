@@ -47,7 +47,7 @@ export default function Reading() {
               areCardsGenerated={areCardsGenerated}
             />
           </section>
-          <section className="w-full pt-4 px-4 sm:w-[80vw] flex flex-col justify-center items-center gap-12 sm:flex-row sm:justify-start sm:items-start sm:pt-2">
+          <section className="w-full pt-4 px-4 sm:w-[80vw] flex flex-col justify-center items-center gap-12 sm:flex-row sm:justify-center sm:items-start sm:pt-2">
             <ReadingArea areCardsGenerated={areCardsGenerated} />
             <Celtic cards={generatedCards} />
           </section>
