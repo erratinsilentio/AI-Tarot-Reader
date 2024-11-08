@@ -10,7 +10,7 @@ export type FlexItems = "start" | "center" | "end";
 export type FlexDirection = "row" | "col";
 
 export interface FlexComponentType {
-  direction: FlexDirection;
+  direction?: FlexDirection;
   justify?: FlexJustify;
   items?: FlexItems;
   className?: string;

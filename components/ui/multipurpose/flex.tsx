@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { FlexComponentType } from "@/types/types";
 import { FC } from "react";
 
-export const FlexComponent: FC<FlexComponentType> = ({
+export const FlexBox: FC<FlexComponentType> = ({
   children,
   direction,
   justify,
