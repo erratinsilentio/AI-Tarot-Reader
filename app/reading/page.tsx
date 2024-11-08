@@ -13,6 +13,7 @@ export default function Reading() {
 
   function createNewSet() {
     const cards = generateSetOfCards();
+    // @ts-ignore
     setGeneratedCards(cards);
     setAreCardsGenerated(true);
     setTokens(tokens - 1);
