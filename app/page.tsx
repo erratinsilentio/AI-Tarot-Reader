@@ -16,11 +16,11 @@ export default async function Home() {
               priority
               className="sm:mr-4"
             />
-            <h1 className="pb-[20px] px-[10px] text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
+            <h1 className="pb-[10px] sm:pb-[20px] px-[10px] pt-4 sm:pt-0 text-center sm:text-left text-[44px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
               Tarot Reader
             </h1>
           </div>
-          <span className="pb-[34px] px-[10px] text-[20px] w-[40vw] text-center font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500">
+          <span className="pb-[34px] px-[10px] text-[20px] sm:w-[40vw] text-center font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500">
             Unlock the mysteries of your future with our AI-powered Tarot
             readings.
           </span>
