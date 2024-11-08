@@ -4,7 +4,7 @@ import { TarotReadingInput } from "@/components/ui/reading/input-area";
 import { ReadingArea } from "@/components/ui/reading/textarea-label";
 import generateSetOfCards from "@/utils/generate-cards";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 export default function Reading() {
   const [areCardsGenerated, setAreCardsGenerated] = useState<boolean>(false);
@@ -25,7 +25,7 @@ export default function Reading() {
   }
 
   return (
-    <>
+    <Suspense>
       <div className="grid grid-rows-[1px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-10 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-6 row-start-2 items-center sm:items-center">
           <div className="px-12 flex flex-row items-end justify-end">
@@ -54,6 +54,6 @@ export default function Reading() {
           </section>
         </main>
       </div>
-    </>
+    </Suspense>
   );
 }
