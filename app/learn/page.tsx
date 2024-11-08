@@ -1,3 +1,6 @@
+import { FlexComponent } from "@/components/ui/multipurpose/flex";
+import { PinkGradientText } from "@/components/ui/multipurpose/pink-gradient";
+import { RedGradientText } from "@/components/ui/multipurpose/red-gradient";
 import { CarouselDemo } from "@/components/ui/reading/caroussel";
 import Image from "next/image";
 
@@ -15,14 +18,14 @@ export default function Learn() {
               priority
               className="sm:mr-4"
             />
-            <section className="flex flex-col">
-              <h1 className="pb-[5px] sm:pb-[5px] px-[10px] pt-4 sm:pt-0 text-center sm:text-left text-[44px] sm:text-[40px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-pink-300 to-indigo-300">
+            <FlexComponent direction="col">
+              <PinkGradientText className="pb-[5px] sm:pb-[5px] px-[10px] pt-4 sm:pt-0 text-center sm:text-left text-[44px] sm:text-[40px]">
                 Tarot Reader
-              </h1>
-              <span className="pb-[24px] px-[10px] text-[25px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500">
+              </PinkGradientText>
+              <RedGradientText className="pb-[24px] px-[10px] text-[25px]">
                 Discover The Meaning of Each Card
-              </span>
-            </section>
+              </RedGradientText>
+            </FlexComponent>
           </div>
           <div className="w-full">
             <CarouselDemo />
