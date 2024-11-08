@@ -3,8 +3,6 @@ import { AlertComponent } from "@/components/ui/home/alert";
 import Instructions from "@/components/ui/home/instructions";
 import LogoHeader from "@/components/ui/home/logo-header";
 import Subtitle from "@/components/ui/home/subtitle";
-import Image from "next/image";
-import Link from "next/link";
 
 export default async function Home() {
   return (
