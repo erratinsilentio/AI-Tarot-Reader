@@ -1,13 +1,10 @@
 "use client";
-import { Celtic } from "@/components/ui/reading/celtic-cross";
-import { TarotReadingInput } from "@/components/ui/reading/input-area";
+import { SkeletonCard } from "@/components/ui/multipurpose/multi-skeleton";
 import Header from "@/components/ui/reading/reading-header";
 import MainLayout from "@/components/ui/reading/reading-layout";
 import TarotControls from "@/components/ui/reading/tarot-controls";
 import TarotDisplay from "@/components/ui/reading/tarot-display";
-import { ReadingArea } from "@/components/ui/reading/textarea-label";
 import generateSetOfCards from "@/utils/generate-cards";
-import Image from "next/image";
 import { Suspense, useState } from "react";
 
 export default function Reading() {
@@ -29,19 +26,24 @@ export default function Reading() {
   }
 
   return (
-    <Suspense>
-      <MainLayout>
+    <MainLayout>
+      <Suspense fallback={<SkeletonCard />}>
         <Header />
+      </Suspense>
+
+      <Suspense fallback={<SkeletonCard />}>
         <TarotControls
           createNewSet={createNewSet}
           resetCards={resetCards}
           areCardsGenerated={areCardsGenerated}
         />
+      </Suspense>
+      <Suspense fallback={<SkeletonCard />}>
         <TarotDisplay
           areCardsGenerated={areCardsGenerated}
           generatedCards={generatedCards}
         />
-      </MainLayout>
-    </Suspense>
+      </Suspense>
+    </MainLayout>
   );
 }
