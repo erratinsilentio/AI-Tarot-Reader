@@ -3,6 +3,8 @@ import Image from "next/image";
 import { HoverCardMeaning } from "./hover-card-meaning";
 import { CelticCrossMeanings } from "@/utils/celtic-cross";
 import { ThotDeck } from "@/utils/cards";
+import { Suspense } from "react";
+import { RoundedSkeleton } from "../multipurpose/multi-skeleton";
 
 export const TarotCard = ({
   position,
