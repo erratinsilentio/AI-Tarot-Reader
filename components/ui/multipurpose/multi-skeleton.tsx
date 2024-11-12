@@ -11,3 +11,11 @@ export function SkeletonCard() {
     </div>
   );
 }
+
+export function RoundedSkeleton() {
+  return (
+    <div className="flex justify-center place-items-center">
+      <Skeleton className="h-12 w-12 rounded-full" />
+    </div>
+  );
+}

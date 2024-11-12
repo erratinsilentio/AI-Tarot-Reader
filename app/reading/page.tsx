@@ -30,7 +30,6 @@ export default function Reading() {
       <Suspense fallback={<SkeletonCard />}>
         <Header />
       </Suspense>
-
       <Suspense fallback={<SkeletonCard />}>
         <TarotControls
           createNewSet={createNewSet}
